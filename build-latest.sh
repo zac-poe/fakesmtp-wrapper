@@ -11,11 +11,9 @@ if [[ ! -d "$src_dir" ]]; then
         ehco "Failed to update source!"
         exit 1
     fi
-else
-    cd "$src_dir"
 fi
 
-git pull
+cd "$src_dir" && git pull
 if [[ $? -ne 0 ]]; then
     ehco "Failed to update source!"
     exit 1
