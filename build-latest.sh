@@ -30,7 +30,7 @@ if [[ ! -a "$jar" ]]; then
     echo "Build completed, but jar was not found!"
     exit 1
 else
-    ln -s "$jar" '../fakeSMTP.jar'
+    ln -sf "$jar" '../fakeSMTP.jar'
 fi
 
 echo "Fake SMTP is ready for use"
